@@ -81,7 +81,7 @@ class PersistedRmq(object):
             except Exception as e:
                 await self.conn.unsubscribe(self.subscribe_chn)
                 await self.close()
-                logging.error(traceback.print_exc())
+                #logging.error(traceback.print_exc())
                 return
         logging.error(f'进入订阅:{self.subscribe_chn}')
         chs = await self.conn.subscribe(self.subscribe_chn)
@@ -97,7 +97,7 @@ class PersistedRmq(object):
                     logging.error(e)
                     await self.conn.unsubscribe(self.subscribe_chn)
                     await self.close()
-                    logging.error(traceback.print_exc())
+                    #logging.error(traceback.print_exc())
                     return
 
     async def publish(self, channel, msg):

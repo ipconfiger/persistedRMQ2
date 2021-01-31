@@ -4,7 +4,7 @@ __author__ = 'Alexander.Li'
 
 from setuptools import setup, find_packages
 
-version = '0.0.1'
+version = '0.0.2'
 
 setup(name='persistedrmq2',
       version=version,
